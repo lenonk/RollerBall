@@ -1,10 +1,18 @@
 using Godot;
-using System;
 
 public class coin : Area
 {
     [Signal]
     public delegate void CoinCollected();
+
+    public override void _Ready() {
+        var _counter = GetTree().GetRoot()
+            .GetNode<Spatial>("Level")
+            .GetNode<Control>("Control")
+            .GetNode<Label>("Counter");
+
+        Connect("CoinCollected", _counter, "OnCoinCollected");
+    }
 
     public override void _PhysicsProcess(float delta) {
         RotateY(Mathf.Deg2Rad(3));

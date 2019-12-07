@@ -213,6 +213,7 @@ tracks/1/keys = {
 [node name="Level" type="Spatial"]
 
 [node name="Floor" type="StaticBody" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
@@ -249,7 +250,7 @@ directional_shadow_max_distance = 40.0
 mesh_library = ExtResource( 6 )
 cell_size = Vector3( 1, 1, 1 )
 data = {
-"cells": PoolIntArray( 14, 0, 0, 65521, 0, 0, 65524, 0, 0, 65533, 0, 0, 14, 1, 0, 65521, 1, 0, 65524, 1, 0, 65533, 1, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 2, 0, 14, 2, 0, 65521, 2, 0, 65524, 2, 0, 65528, 2, 0, 65529, 2, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 8, 3, 0, 14, 3, 0, 65521, 3, 0, 65524, 3, 0, 8, 4, 0, 14, 4, 0, 65521, 4, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 8, 5, 0, 14, 5, 0, 65521, 5, 0, 65535, 5, 0, 5, 6, 0, 8, 6, 0, 14, 6, 0, 65521, 6, 0, 65524, 6, 0, 65525, 6, 0, 65526, 6, 0, 65527, 6, 0, 65528, 6, 0, 65529, 6, 0, 65535, 6, 0, 5, 7, 0, 8, 7, 0, 11, 7, 0, 14, 7, 0, 65521, 7, 0, 65524, 7, 0, 65529, 7, 0, 65535, 7, 0, 5, 8, 0, 8, 8, 0, 11, 8, 0, 14, 8, 0, 65521, 8, 0, 65524, 8, 0, 65529, 8, 0, 65535, 8, 0, 5, 9, 0, 8, 9, 0, 11, 9, 0, 14, 9, 0, 65521, 9, 0, 65524, 9, 0, 65529, 9, 0, 65535, 9, 0, 4, 10, 0, 5, 10, 0, 11, 10, 0, 14, 10, 0, 65521, 10, 0, 65524, 10, 0, 65529, 10, 0, 65532, 10, 0, 65533, 10, 0, 65534, 10, 0, 65535, 10, 0, 11, 11, 0, 14, 11, 0, 65521, 11, 0, 65524, 11, 0, 65529, 11, 0, 14, 12, 0, 65521, 12, 0, 14, 13, 0, 65521, 13, 0, 0, 14, 0, 1, 14, 0, 2, 14, 0, 3, 14, 0, 4, 14, 0, 5, 14, 0, 6, 14, 0, 7, 14, 0, 8, 14, 0, 9, 14, 0, 10, 14, 0, 11, 14, 0, 12, 14, 0, 13, 14, 0, 14, 14, 0, 65521, 14, 0, 65522, 14, 0, 65523, 14, 0, 65524, 14, 0, 65525, 14, 0, 65526, 14, 0, 65527, 14, 0, 65528, 14, 0, 65529, 14, 0, 65530, 14, 0, 65531, 14, 0, 65532, 14, 0, 65533, 14, 0, 65534, 14, 0, 65535, 14, 0, 0, 65521, 0, 1, 65521, 0, 2, 65521, 0, 3, 65521, 0, 4, 65521, 0, 5, 65521, 0, 6, 65521, 0, 7, 65521, 0, 8, 65521, 0, 9, 65521, 0, 10, 65521, 0, 11, 65521, 0, 12, 65521, 0, 13, 65521, 0, 14, 65521, 0, 65521, 65521, 0, 65522, 65521, 0, 65523, 65521, 0, 65524, 65521, 0, 65525, 65521, 0, 65526, 65521, 0, 65527, 65521, 0, 65528, 65521, 0, 65529, 65521, 0, 65530, 65521, 0, 65531, 65521, 0, 65532, 65521, 0, 65533, 65521, 0, 65534, 65521, 0, 65535, 65521, 0, 14, 65522, 0, 65521, 65522, 0, 14, 65523, 0, 65521, 65523, 0, 0, 65524, 0, 1, 65524, 0, 2, 65524, 0, 3, 65524, 0, 10, 65524, 0, 14, 65524, 0, 65521, 65524, 0, 65524, 65524, 0, 65525, 65524, 0, 65526, 65524, 0, 65527, 65524, 0, 65528, 65524, 0, 65529, 65524, 0, 3, 65525, 0, 10, 65525, 0, 14, 65525, 0, 65521, 65525, 0, 65524, 65525, 0, 65532, 65525, 0, 3, 65526, 0, 6, 65526, 0, 7, 65526, 0, 8, 65526, 0, 9, 65526, 0, 10, 65526, 0, 14, 65526, 0, 65521, 65526, 0, 65524, 65526, 0, 65532, 65526, 0, 3, 65527, 0, 9, 65527, 0, 14, 65527, 0, 65521, 65527, 0, 65524, 65527, 0, 65532, 65527, 0, 65533, 65527, 0, 65534, 65527, 0, 9, 65528, 0, 14, 65528, 0, 65521, 65528, 0, 9, 65529, 0, 14, 65529, 0, 65521, 65529, 0, 1, 65530, 0, 2, 65530, 0, 3, 65530, 0, 4, 65530, 0, 5, 65530, 0, 9, 65530, 0, 14, 65530, 0, 65521, 65530, 0, 65525, 65530, 0, 65526, 65530, 0, 65527, 65530, 0, 65528, 65530, 0, 65529, 65530, 0, 65530, 65530, 0, 1, 65531, -1610612736, 14, 65531, 0, 65521, 65531, 0, 65530, 65531, 0, 1, 65532, 536870912, 14, 65532, 0, 65521, 65532, 0, 65530, 65532, 0, 1, 65533, 0, 11, 65533, 0, 14, 65533, -1610612736, 65521, 65533, 0, 65530, 65533, -1610612736, 65533, 65533, 0, 1, 65534, 0, 11, 65534, 536870912, 14, 65534, 536870912, 65521, 65534, 536870912, 65530, 65534, 0, 65533, 65534, 0, 1, 65535, 0, 7, 65535, 1610612736, 8, 65535, 0, 9, 65535, 536870912, 10, 65535, 0, 11, 65535, -1610612736, 14, 65535, 0, 65521, 65535, 0, 65524, 65535, 0, 65525, 65535, -1610612736, 65526, 65535, 0, 65527, 65535, 0, 65533, 65535, 0 )
+"cells": PoolIntArray( 14, 0, 0, 65521, 0, 0, 65524, 0, 0, 65533, 0, 0, 14, 1, 0, 65521, 1, 0, 65524, 1, 0, 65533, 1, 0, 8, 2, 0, 9, 2, 0, 10, 2, 0, 11, 2, 0, 14, 2, 0, 65521, 2, 0, 65524, 2, 0, 65528, 2, 0, 65529, 2, 0, 65530, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 8, 3, 0, 14, 3, 0, 65521, 3, 0, 65524, 3, 0, 8, 4, 0, 14, 4, 0, 65521, 4, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 8, 5, 0, 14, 5, 0, 65521, 5, 0, 65535, 5, 0, 5, 6, 0, 8, 6, 0, 14, 6, 0, 65521, 6, 0, 65524, 6, 0, 65525, 6, 0, 65526, 6, 0, 65527, 6, 0, 65528, 6, 0, 65529, 6, 0, 65535, 6, 0, 5, 7, 0, 8, 7, 0, 11, 7, 0, 14, 7, 0, 65521, 7, 0, 65524, 7, 0, 65529, 7, 0, 65535, 7, 0, 5, 8, 0, 8, 8, 0, 11, 8, 0, 14, 8, 0, 65521, 8, 0, 65524, 8, 0, 65529, 8, 0, 65535, 8, 0, 5, 9, 0, 8, 9, 0, 11, 9, 0, 14, 9, 0, 65521, 9, 0, 65524, 9, 0, 65529, 9, 0, 65535, 9, 0, 4, 10, 0, 5, 10, 0, 11, 10, 0, 14, 10, 0, 65521, 10, 0, 65524, 10, 0, 65529, 10, 0, 65532, 10, 0, 65533, 10, 0, 65534, 10, 0, 65535, 10, 0, 11, 11, 0, 14, 11, -1610612736, 65521, 11, 0, 65524, 11, 0, 65529, 11, 0, 14, 12, 0, 65521, 12, 0, 14, 13, 0, 65521, 13, 0, 0, 14, 0, 1, 14, 0, 2, 14, 0, 3, 14, 0, 4, 14, 0, 5, 14, 0, 6, 14, 0, 7, 14, 0, 8, 14, 0, 9, 14, 0, 10, 14, 0, 11, 14, 0, 12, 14, 0, 13, 14, 0, 14, 14, 0, 65521, 14, 0, 65522, 14, 0, 65523, 14, 0, 65524, 14, 0, 65525, 14, 0, 65526, 14, 0, 65527, 14, 0, 65528, 14, 0, 65529, 14, -1610612736, 65530, 14, 0, 65531, 14, 0, 65532, 14, 0, 65533, 14, 0, 65534, 14, 0, 65535, 14, 0, 0, 65521, 0, 1, 65521, 0, 2, 65521, 0, 3, 65521, 0, 4, 65521, 0, 5, 65521, 0, 6, 65521, 0, 7, 65521, 0, 8, 65521, 0, 9, 65521, 0, 10, 65521, 0, 11, 65521, 0, 12, 65521, 0, 13, 65521, 0, 14, 65521, 0, 65521, 65521, 0, 65522, 65521, -1610612736, 65523, 65521, 0, 65524, 65521, 0, 65525, 65521, -1610612736, 65526, 65521, 0, 65527, 65521, 0, 65528, 65521, 0, 65529, 65521, 0, 65530, 65521, 0, 65531, 65521, 0, 65532, 65521, 0, 65533, 65521, 0, 65534, 65521, 0, 65535, 65521, 0, 14, 65522, 0, 65521, 65522, 0, 14, 65523, 0, 65521, 65523, 0, 0, 65524, 0, 1, 65524, 0, 2, 65524, -1610612736, 3, 65524, -1610612736, 10, 65524, 0, 14, 65524, -1610612736, 65521, 65524, 0, 65524, 65524, 0, 65525, 65524, 0, 65526, 65524, 0, 65527, 65524, 0, 65528, 65524, 0, 65529, 65524, 0, 3, 65525, -1610612736, 10, 65525, 0, 14, 65525, -1610612736, 65521, 65525, 0, 65524, 65525, 0, 65532, 65525, -1610612736, 3, 65526, 0, 6, 65526, 0, 7, 65526, 0, 8, 65526, -1610612736, 9, 65526, 0, 10, 65526, 0, 14, 65526, 0, 65521, 65526, 0, 65524, 65526, 0, 65532, 65526, 0, 3, 65527, 0, 9, 65527, 0, 14, 65527, 0, 65521, 65527, 0, 65524, 65527, -1610612736, 65532, 65527, 0, 65533, 65527, 0, 65534, 65527, 0, 9, 65528, 0, 14, 65528, 0, 65521, 65528, 0, 9, 65529, -1610612736, 14, 65529, 0, 65521, 65529, -1610612736, 1, 65530, 0, 2, 65530, 0, 3, 65530, 0, 4, 65530, -1610612736, 5, 65530, 0, 9, 65530, -1610612736, 14, 65530, 0, 65521, 65530, 0, 65525, 65530, 0, 65526, 65530, 0, 65527, 65530, 0, 65528, 65530, 0, 65529, 65530, 0, 65530, 65530, -1610612736, 1, 65531, 0, 14, 65531, -1610612736, 65521, 65531, 0, 65530, 65531, 0, 1, 65532, 0, 14, 65532, 0, 65521, 65532, 0, 65530, 65532, 0, 1, 65533, 0, 11, 65533, 0, 14, 65533, -1610612736, 65521, 65533, -1610612736, 65530, 65533, 0, 65533, 65533, -1610612736, 1, 65534, 0, 11, 65534, 0, 14, 65534, 0, 65521, 65534, -1610612736, 65530, 65534, 0, 65533, 65534, 0, 1, 65535, 0, 7, 65535, 0, 8, 65535, 0, 9, 65535, 0, 10, 65535, 0, 11, 65535, 0, 14, 65535, 0, 65521, 65535, 0, 65524, 65535, 0, 65525, 65535, 0, 65526, 65535, 0, 65527, 65535, 0, 65533, 65535, 0 )
 }
 __meta__ = {
 "_editor_clip_": 0
@@ -469,7 +470,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0121, 0.527, -10.1889 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Control" type="Control" parent="."]
-editor/display_folded = true
 margin_right = 1280.0
 margin_bottom = 720.0
 
@@ -526,75 +526,40 @@ autoplay = "Enemy3Animation"
 anims/Enemy1Animation = SubResource( 9 )
 anims/Enemy2Animation = SubResource( 10 )
 anims/Enemy3Animation = SubResource( 11 )
-[connection signal="CoinCollected" from="Coins/CoinContainer1/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer1/Coin" to="Coins/CoinContainer1/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer2/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer2/Coin" to="Coins/CoinContainer2/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer3/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer3/Coin" to="Coins/CoinContainer3/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer4/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer4/Coin" to="Coins/CoinContainer4/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer5/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer5/Coin" to="Coins/CoinContainer5/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer6/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer6/Coin" to="Coins/CoinContainer6/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer7/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer7/Coin" to="Coins/CoinContainer7/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer8/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer8/Coin" to="Coins/CoinContainer8/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer9/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer9/Coin" to="Coins/CoinContainer9/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer10/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer10/Coin" to="Coins/CoinContainer10/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer11/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer11/Coin" to="Coins/CoinContainer11/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer12/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer12/Coin" to="Coins/CoinContainer12/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer13/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer13/Coin" to="Coins/CoinContainer13/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer14/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer14/Coin" to="Coins/CoinContainer14/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer15/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer15/Coin" to="Coins/CoinContainer15/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer16/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer16/Coin" to="Coins/CoinContainer16/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer17/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer17/Coin" to="Coins/CoinContainer17/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer18/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer18/Coin" to="Coins/CoinContainer18/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer19/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer19/Coin" to="Coins/CoinContainer19/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer20/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer20/Coin" to="Coins/CoinContainer20/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer21/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer21/Coin" to="Coins/CoinContainer21/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer22/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer22/Coin" to="Coins/CoinContainer22/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer23/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer23/Coin" to="Coins/CoinContainer23/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer24/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer24/Coin" to="Coins/CoinContainer24/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer25/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer25/Coin" to="Coins/CoinContainer25/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer26/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer26/Coin" to="Coins/CoinContainer26/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer27/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer27/Coin" to="Coins/CoinContainer27/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer28/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer28/Coin" to="Coins/CoinContainer28/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer29/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer29/Coin" to="Coins/CoinContainer29/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer30/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer30/Coin" to="Coins/CoinContainer30/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer31/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer31/Coin" to="Coins/CoinContainer31/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer32/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer32/Coin" to="Coins/CoinContainer32/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer33/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer33/Coin" to="Coins/CoinContainer33/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer34/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer34/Coin" to="Coins/CoinContainer34/Coin" method="OnCoinBodyEntered"]
-[connection signal="CoinCollected" from="Coins/CoinContainer35/Coin" to="Control/Counter" method="OnCoinCollected"]
 [connection signal="body_entered" from="Coins/CoinContainer35/Coin" to="Coins/CoinContainer35/Coin" method="OnCoinBodyEntered"]
 [connection signal="timeout" from="Control/Counter/Timer" to="Control/Counter" method="OnTimerTimeout"]
 [connection signal="body_entered" from="Enemies/enemy1" to="Player" method="OnEnemyBodyEntered"]
