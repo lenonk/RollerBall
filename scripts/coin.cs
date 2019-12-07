@@ -6,11 +6,12 @@ public class coin : Area
     public delegate void CoinCollected();
 
     public override void _Ready() {
-        var _counter = GetTree().GetRoot()
+        /*var _counter = GetTree().GetRoot()
             .GetNode<Spatial>("Level")
             .GetNode<Control>("Control")
-            .GetNode<Label>("Counter");
+            .GetNode<Label>("Counter");*/
 
+        var _counter = GetTree().GetRoot().GetNode<Label>("Level/Control/Counter");
         Connect("CoinCollected", _counter, "OnCoinCollected");
     }
 
