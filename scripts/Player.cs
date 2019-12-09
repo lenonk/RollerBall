@@ -60,23 +60,12 @@ public class Player : KinematicBody
         _dir.y = 0;
         _dir = _dir.Normalized();
 
-        _vel.y += delta * Gravity;
+        _vel.y = 0;
 
-        Vector3 hvel = _vel;
-        hvel.y = 0;
-
-        Vector3 target = _dir;
-        target *= MaxSpeed;
-
-        float accel;
-        if (_dir.Dot(hvel) > 0)
-            accel = Accel;
-        else
-            accel = Decel;
-
-        hvel = hvel.LinearInterpolate(target, accel * delta);
-        _vel.x = hvel.x;
-        _vel.z = hvel.z;
+        float accel = _dir.Dot(_vel) > 0 ? Accel : Decel;
+        _dir *= MaxSpeed;
+        _vel = _vel.LinearInterpolate(_dir, accel * delta);
+        _vel.y = Gravity;
 
         ProcessRotation(_vel, delta);
         _vel = MoveAndSlide(_vel, Vector3.Up);
