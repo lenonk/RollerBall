@@ -6,7 +6,7 @@ public class coin : Area
     public delegate void CoinCollected();
 
     public override void _Ready() {
-        var _counter = GetTree().GetRoot().GetNode<Label>("Level/Control/Counter");
+        var _counter = GetTree().GetRoot().GetChild(0).GetNode<Label>("Control/Counter");
         Connect("CoinCollected", _counter, "OnCoinCollected");
     }
 
@@ -20,6 +20,7 @@ public class coin : Area
 
         var _body = (KinematicBody)sender;
         if (_body.Name == "Player") {
+            GetNode<AudioStreamPlayer3D>("CoinCollectSound").Play();
             GetNode<Timer>("Timer").Start();
             GetNode<AnimationPlayer>("AnimationPlayer").Play("bounce");
         }

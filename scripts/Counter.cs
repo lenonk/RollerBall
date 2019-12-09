@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Godot;
 
 public class Counter : Label
@@ -17,6 +18,11 @@ public class Counter : Label
     }
 
     public void OnTimerTimeout() {
-        GetTree().ChangeScene("res://scenes/Win.tscn");
+        if (GetTree().GetCurrentScene().GetName() == "Level") {
+            Debug.WriteLine(GetTree().GetCurrentScene().GetName());
+            GetTree().ChangeScene("res://scenes/Level2.tscn");
+        }
+        else
+            GetTree().ChangeScene("res://scenes/Win.tscn");
     }
 }

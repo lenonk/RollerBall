@@ -3,51 +3,93 @@ using Godot;
 
 public class Player : KinematicBody
 {
-    // Constants
-    const int Speed = 12;
-    const float rotSpeed = (float)(Speed * 0.75);
-
     // Variables
-    Vector3 velocity = new Vector3();
+    [Export] public float Gravity = -9.8f;
+    [Export] public float MaxSpeed = 15;
+    [Export] public float Accel = 4;
+    [Export] public float Decel = 6;
 
-    Vector3 GetRotationSpeed(Vector3 speed) {
-        return speed * (float)0.75;
+    private Vector3 _vel = new Vector3();
+    private Vector3 _dir = new Vector3();
+
+    private Camera _camera;
+    private MeshInstance _mesh;
+
+    private bool _isMoving;
+ 
+    public override void _Ready() {
+        _camera = GetNode<Camera>("CameraGimbal/InnerGimbal/Camera");
+        _mesh = GetNode<MeshInstance>("MeshInstance");
     }
 
-    public override void _PhysicsProcess(float delta) {
-        var _mesh = GetNode<MeshInstance>("MeshInstance");
+    public override void _Process(float delta) {
+        ProcessInput(delta);
+        ProcessMovement(delta);
 
-        if (Input.IsActionPressed("ui_left") && Input.IsActionPressed("ui_right"))
-            velocity.x = Mathf.Lerp(velocity.x, 0, (float)0.05);
-        else if (Input.IsActionPressed("ui_left"))
-            velocity.x = Mathf.Lerp(velocity.x, -Speed, (float)0.1);
-        else if (Input.IsActionPressed("ui_right"))
-            velocity.x = Mathf.Lerp(velocity.x, Speed, (float)0.1);
-        else
-            velocity.x = Mathf.Lerp(velocity.x, 0, (float)0.05);
-
-        if (Input.IsActionPressed("ui_up") && Input.IsActionPressed("ui_down"))
-            velocity.z = Mathf.Lerp(velocity.z, 0, (float)0.05);
-        else if (Input.IsActionPressed("ui_up"))
-            velocity.z = Mathf.Lerp(velocity.z, -Speed, (float)0.1);
-        else if (Input.IsActionPressed("ui_down"))
-            velocity.z = Mathf.Lerp(velocity.z, Speed, (float)0.1);
-        else
-            velocity.z = Mathf.Lerp(velocity.z, 0, (float)0.05);
-
-        var rotSpeed = GetRotationSpeed(velocity);
-        _mesh.RotateZ(-Mathf.Deg2Rad(rotSpeed.x));
-        _mesh.RotateX(Mathf.Deg2Rad(rotSpeed.z));
-        
-        MoveAndSlide(velocity);
-    }
-
-    public void OnEnemyBodyEntered(object sender) {
-        if (!(sender is KinematicBody))
-            return;
-
-        KinematicBody body = (KinematicBody)sender;
-        if (body.Name == "Player")
+        if (Translation.y < -15)
             GetTree().ChangeScene("res://scenes/GameOver.tscn");
+    }
+
+    private void ProcessInput(float delta) {
+        _dir = new Vector3();
+        Transform camXform = _camera.GetGlobalTransform();
+
+        Vector2 inputMovementVector = new Vector2();
+
+        if (Input.IsActionPressed("ui_up"))
+            inputMovementVector.y += 1;
+        if (Input.IsActionPressed("ui_down"))
+            inputMovementVector.y -= 1;
+        if (Input.IsActionPressed("ui_left"))
+            inputMovementVector.x -= 1;
+        if (Input.IsActionPressed("ui_right"))
+            inputMovementVector.x += 1;
+
+        if (inputMovementVector.x == 1 || inputMovementVector.y == 1)
+            _isMoving = true;
+        else
+            _isMoving = false;
+
+        inputMovementVector = inputMovementVector.Normalized();
+
+        _dir += -camXform.basis.z * inputMovementVector.y;
+        _dir += camXform.basis.x * inputMovementVector.x;
+    }
+
+    private void ProcessMovement(float delta) {
+        _dir.y = 0;
+        _dir = _dir.Normalized();
+
+        _vel.y += delta * Gravity;
+
+        Vector3 hvel = _vel;
+        hvel.y = 0;
+
+        Vector3 target = _dir;
+        target *= MaxSpeed;
+
+        float accel;
+        if (_dir.Dot(hvel) > 0)
+            accel = Accel;
+        else
+            accel = Decel;
+
+        hvel = hvel.LinearInterpolate(target, accel * delta);
+        _vel.x = hvel.x;
+        _vel.z = hvel.z;
+
+        ProcessRotation(_vel, delta);
+        _vel = MoveAndSlide(_vel, Vector3.Up);
+    }
+
+    private void OnEnemyCollision(Node node) {
+        if (_isMoving)
+            GetTree().ChangeScene("res://scenes/GameOver.tscn");
+    }
+
+    private void ProcessRotation(Vector3 speed, float delta) {
+        Vector3 rotation = speed * delta / 1; // 1 is radius of player mesh.
+        _mesh.RotateZ(-rotation.x);
+        _mesh.RotateX(rotation.z);
     }
 }
